@@ -14,10 +14,9 @@ namespace AppRestart
         static void Main(string[] args)
         {
             //create a new telnet connection to hostname "192.168.3.37" on port "23"
-            TelnetConnection tc = new TelnetConnection("192.168.3.37", 23);
-
+            TelnetConnection tc = new TelnetConnection("192.168.3.34", 23);
             //login with password "moxa", using a timeout of 100ms, and show server output
-            string s = tc.Login( "moxa" + Environment.NewLine, 1000);
+            string s = tc.Login("admin" +Environment.NewLine, "moxa" + Environment.NewLine, 1000);
              
             Console.Write(s);
 
@@ -32,20 +31,20 @@ namespace AppRestart
             Thread.Sleep(500);
             tc.WriteLine("y" + Environment.NewLine);
 
-            // while connected
+            //// while connected
             //while (tc.IsConnected && prompt.Trim() != "exit")
-            //    {
-            //        // display server output
-            //        Console.Write(tc.Read());
+            //{
+            //    // display server output
+            //    Console.Write(tc.Read());
             //    // send client input to server
             //    prompt = Console.ReadLine();
-            //        tc.WriteLine(prompt);
+            //    //tc.WriteLine(prompt);
 
-            //        // display server output
-            //        Console.Write(tc.Read());
-            //    }
-            //    Console.WriteLine("***DISCONNECTED");
-            //    Console.ReadLine();
+            //    // display server output
+            //    Console.Write(tc.Read());
+            //}
+            //Console.WriteLine("***DISCONNECTED");
+            //Console.ReadLine();
         }
     }
 }

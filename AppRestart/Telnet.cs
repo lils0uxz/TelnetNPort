@@ -35,15 +35,15 @@ namespace AppRestart
 
         }
 
-        public string Login( string Password, int LoginTimeOutMs)
+        public string Login(string Username, string Password, int LoginTimeOutMs)
         {
             int oldTimeOutMs = TimeOutMs;
             TimeOutMs = LoginTimeOutMs;
             string s = Read();
-            //if (!s.TrimEnd().EndsWith(":"))
-            //    throw new Exception("Failed to connect : no login prompt");
-            //WriteLine(Username);
-            //s += Read();
+            if (!s.TrimEnd().EndsWith(":"))
+                throw new Exception("Failed to connect : no login prompt");
+            WriteLine(Username);
+            s += Read();
             if (!s.TrimEnd().EndsWith(":"))
                 throw new Exception("Failed to connect : no password prompt");
             WriteLine(Password);
