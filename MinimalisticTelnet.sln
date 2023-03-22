@@ -5,7 +5,9 @@ VisualStudioVersion = 17.5.33502.453
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MinimalisticTelnet", "MinimalisticTelnet\MinimalisticTelnet.csproj", "{AD79EBB8-1157-4120-99D2-433559991A16}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppRestart", "AppRestart\AppRestart.csproj", "{446FE8E5-2BC5-4D8F-B5BC-C0CA96AD79CD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NPort 5150A", "AppRestart\NPort 5150A.csproj", "{446FE8E5-2BC5-4D8F-B5BC-C0CA96AD79CD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NPort 5150", "NPort 5150\NPort 5150.csproj", "{68E418B1-3AF8-4BF0-B51E-BA4894F3C96B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{446FE8E5-2BC5-4D8F-B5BC-C0CA96AD79CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{446FE8E5-2BC5-4D8F-B5BC-C0CA96AD79CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{446FE8E5-2BC5-4D8F-B5BC-C0CA96AD79CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68E418B1-3AF8-4BF0-B51E-BA4894F3C96B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68E418B1-3AF8-4BF0-B51E-BA4894F3C96B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68E418B1-3AF8-4BF0-B51E-BA4894F3C96B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68E418B1-3AF8-4BF0-B51E-BA4894F3C96B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

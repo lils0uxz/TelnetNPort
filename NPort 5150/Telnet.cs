@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Net;
 using System.Net.Sockets;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+//using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
-namespace NPort_5150A
+namespace NPort_5150
 {
     enum Verbs
     {
@@ -34,15 +34,17 @@ namespace NPort_5150A
             tcpSocket = new TcpClient(Hostname, Port);
         }
 
-        public string Login(string Username, string Password, int LoginTimeOutMs)
+        public string Login(string Password, int LoginTimeOutMs)
         {
             int oldTimeOutMs = TimeOutMs;
             TimeOutMs = LoginTimeOutMs;
             string s = Read();
-            if (!s.TrimEnd().EndsWith(":"))
-                throw new Exception("Failed to connect : no login prompt");
-            WriteLine(Username);
-            s += Read();
+            /*
+            //if (!s.TrimEnd().EndsWith(":"))
+            //    throw new Exception("Failed to connect : no login prompt");
+            //WriteLine(Username);
+            //s += Read();
+            */
             if (!s.TrimEnd().EndsWith(":"))
                 throw new Exception("Failed to connect : no password prompt");
             WriteLine(Password);
